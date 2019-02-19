@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; }
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: magenta;
+    }
+    .container-input {
+      margin: 20px;
+      padding: 10px;
+      font-size: 40px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #666;
+      outline: none;
+    }
+    h1 { color: white; font-size: 60px; }
+
+  </style>
+  <title>Vue by CDN</title>
+</head>
+<body>
+  <div class="container" id="app">
+    <h1>{{ title }}</h1>
+    <input
+      type="text"
+      class="container-input"
+      v-model="title">
+  </div>
+  <script src="https://vuejs.org/js/vue.min.js"></script>
+  
+  <script>
+    new Vue({
+      el: '#app',
+      data: () => ({
+        title: 'Meetop Developers BR'
+      }),
+    });
+  </script>
+</body>
+</html>
